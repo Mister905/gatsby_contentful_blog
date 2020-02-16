@@ -1,0 +1,93 @@
+npm install -g gatsby-cli
+
+gatsby new <project-name> <starter_url>
+
+e.g. gatsby new gatsby https://github.com/gatsbyjs/gatsby-starter-hello-world 
+
+npm run develop
+
+http://localhost:8000/
+
+/src/pages/index.js (DEFAULT PAGE/COMPONENT RENDERED)
+
+Gatsby renders the static pages inside the pages directory
+
+touch blog ./src/pages
+
+import { Link } from "gatsby"
+
+Link optimization for instantly loading new content without page refresh
+
+Shared Content (Layout Components)
+
+mkdir /src/styles
+
+touch index.scss
+
+npm i node-sass gatsby-plugin-sass
+
+gatsby-config.js 
+
+
+localhost:8000/___graphql (Similar to Postman)
+
+query {
+    site {
+        siteMetaData {
+            title
+        }
+    }
+}
+
+Access the static value inside /layout/header.js with useStaticQuery
+
+npm i --save-dev cross-env
+
+package.json
+"develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop"
+
+Gatsby can use Markdown files to create pages in your site. You add plugins to read and understand folders with Markdown files and from them create pages automatically.
+
+mkdir /src/posts
+
+npm i gatsby-source-filesystem
+
+npm i gatsby-transformer-remark
+
+touch gatsby-node.js
+
+mkdir templates
+
+touch blog.js
+
+npm i gatsby-plugin-sharp gatsby-remark-images gatsby-remark-relative-images
+
+Contentful -> Create Space -> Create an empty space
+
+Content Model -> Add content type -> e.g. Blog Post
+
+Add new field -> e.g. Text -> Save
+
+Content -> Add Blog Post
+
+npm i gatsby-source-contentful
+
+Contentful -> Settings -> API Keys
+
+Store inside .env.development
+
+npm i @contentful/rich-text-react-renderer
+
+If you don't get an image url, remove the .cache folder in your workspace and restart the server.
+
+touch /src/pages/404.js
+
+npm i gatsby-plugin-react-helmet react-helmet
+
+touch /src/layout/head.js
+
+static -> favicon.ico (swap with your own)
+
+.gitignore
+
+./config/dev.js
