@@ -102,3 +102,5 @@ e.g.
 GATSBY_CONTENTFUL_SPACE_ID    cxd2gv1maf8m
 
 GATSBY_CONTENTFUL_ACCESS_TOKEN O9HS4M3ha27J-lLMPL9vjaZ_aKSNXjVX2tQO_n-68c8
+
+When content is updated in Contentful, a new deploy must be manually triggered inside netlify -> Trigger deploy -> Clear cache and deploy site
